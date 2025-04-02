@@ -7,7 +7,8 @@ import requests
 import typer
 from typing_extensions import Annotated
 
-app = typer.Typer()
+# Do not show locals to avoid displaying `GH_TOKEN`
+app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 @dataclasses.dataclass(frozen=True)
